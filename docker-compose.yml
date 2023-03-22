@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+  api-gateway:
+    container_name: api-gateway
+    restart: always
+    build:
+      context: ./api-gateway-express
+      dockerfile: dockerfile
+    ports:
+      - 2308:2308
+    networks:
+      - app_net
+            
+
+  bivouac-api:
+    container_name: bivouac-api
+    restart: always
+    build:
+      context: ./bivouac-api
+      dockerfile: dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - app_net
+
+  bivouac-app: 
+    container_name: bivouac-app
+    restart: always
+    build:
+      context: ./bivouac-app
+      dockerfile: dockerfile
+    ports:
+      - 5000:5000
+    networks:
+      - app_net
+
+networks:
+  app_net:
+    driver: bridge
+    enable_ipv6: false
+
+
+

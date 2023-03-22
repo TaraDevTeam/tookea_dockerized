@@ -1,0 +1,9 @@
+[submodule "bivouac-app"]
+	path = bivouac-app
+	url = https://github.com/TaraDevTeam/bivouac-app.git
+[submodule "api-gateway-express"]
+	path = api-gateway-express
+	url = https://github.com/TaraDevTeam/api-gateway.git
+[submodule "bivouac-api"]
+	path = bivouac-api
+	url = https://github.com/TaraDevTeam/bivouac-api.git
